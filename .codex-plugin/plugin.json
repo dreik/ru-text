@@ -22,6 +22,7 @@
   "logo": "./logo-round.png",
   "skills": "./skills/",
   "interface": {
+    "composerIcon": "./assets/icon.png",
     "displayName": "ru-text",
     "shortDescription": "Russian text quality — ~1,044 rules for typography, info-style, editorial, UX writing",
     "developerName": "Arseniy Kamyshev",
