@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.7.3] - 2026-05-29
 
+### Added
+- **Codex marketplace icon.** Added `assets/icon.png` (512x512 grayscale, derived from the project's brand logo `logo-round.png`) and referenced it via `interface.composerIcon` in `.codex-plugin/plugin.json`, so ru-text displays an icon in the awesome-codex-plugins marketplace browser. Mirrored upstream in hashgraph-online/awesome-codex-plugins#162 (resolves issue #11).
+
 ### Changed
 - **Percent sign now defaults to no space (`100%`).** Rule R37 in `typography.md` previously forced a non-breaking space before the percent sign (`100<nbsp>%`). For general and web text -- ru-text's primary register -- the dominant de facto norm and the traditional Russian hand-typesetting handbooks (М. Шульмейстер; П. Гиленсон) set the percent sign tight to the number (`100%`). The spaced form (`100 %`) is the metrological convention of ГОСТ 8.417 and remains valid for scientific and technical documents, but it is now positioned as a lower-priority, context-specific variant rather than the default. Provenance note: ГОСТ 8.417-2002 was superseded by ГОСТ 8.417-2024 (in force 30 Sep 2024), which keeps the spaced form; this change is a register/precedence decision (editorial norm over metrological standard for general text), not a claim that the standard's rule is obsolete.
 - Added a short "register and precedence" note to section C.4 of `typography.md`: where a metrological standard (ГОСТ 8.417) conflicts with editorial practice for general text, the editorial norm is the default.
