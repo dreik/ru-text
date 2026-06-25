@@ -7,11 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.8.1] - 2026-06-26
+
 ### Added
 - **Google Antigravity** install instructions in both READMEs. Antigravity reads the SKILL.md format natively, so ru-text works with no repackaging — copy the skill into `~/.gemini/antigravity/skills/` (global) or `<project>/.agent/skills/` (workspace); paths vary by version, so the section links the official Antigravity Skills codelab. Brings the documented platform count to 12.
 
 ### Changed
 - **README is now Russian-primary.** `README.md` holds the Russian text (the GitHub default, fitting for a Russian-text-quality tool) and the English version moved to `README.en.md`. A prominent, welcoming English switcher sits atop `README.md` so English readers are greeted and one click from the full English docs. File history preserved via `git mv`.
+- **`/ru-check` and `/ru-score` declare an explicit read-only contract.** Both commands now state that they report issues and return the corrected text (or a quality score) and must never write to, edit, or overwrite the analysed source file(s) — their `allowed-tools` are `Read, Grep, Glob` by design. Stops non-deterministic, silent NBSP insertion into source files: such a change is invisible in targets that strip NBSP on import (e.g. Notion) and breaks later exact-string grep/replace tooling on that file. Doc-only; no rules changed. (#15)
+- **Always-on skill — reviewing vs. rewriting.** `SKILL.md` now instructs that when *checking* or proofreading existing text or a file, ru-text returns the corrected version plus a list of changes rather than silently overwriting the source; in-place rewrites happen only on explicit request. Closes the path by which proofreading via the always-on skill could mutate a source file.
 
 ## [1.8.0] - 2026-06-08
 

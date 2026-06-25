@@ -54,6 +54,8 @@ Reference files: `${CLAUDE_PLUGIN_ROOT}/skills/ru-text/references/<filename>`
 
 ## Output format
 
+**Read-only — do NOT modify the source files.** `ru-score` reports a score and issues; it must not write to, edit, or overwrite the analysed file(s) — its `allowed-tools` are `Read, Grep, Glob` by design.
+
 ```
 ## Оценка: X.X / 10 — [label from table above]
 
